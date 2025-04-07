@@ -11,6 +11,10 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
 	binary_tree_t *new;
 
+	/* Checking if both children already exist */
+	if (parent->left != NULL && parent->right != NULL)
+		return (NULL);
+
 	/* Allocating memory for the new node */
 	new = malloc(sizeof(binary_tree_t));
 
@@ -20,10 +24,16 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 
 	/* Setting the new node values */
 	new->n = value;
+	new->parent = parent;
 	new->left = NULL;
 	new->right = NULL;
 
-	if (
+	/* Updating parent */
+	if (parent->left == NULL)
+		parent->left = new;
+
+	else
+		parent->right = new;
 
 	return (new);
 }

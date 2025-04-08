@@ -7,9 +7,8 @@
  */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-	/*An empty tree is a full tree*/
 	if (tree == NULL)
-		return (1);
+		return (0);
 
 	/*A tree with only leaves is a full tree*/
 	if (tree->left == NULL && tree->right == NULL)

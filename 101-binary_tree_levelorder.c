@@ -3,7 +3,7 @@
 void binary_tree_children(binary_tree_t **list, void (*func)(int));
 
 /**
- * binary_tree_levelorder - goes through a binary tree using level order traversal
+ * binary_tree_levelorder - processes a binary tree using level order traversal
  * @tree: pointer to the root node
  * @func: pointer to function
  */
@@ -25,8 +25,8 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 }
 
 /**
- * binary_tree_children - processes a list of nodes and creates a new one with children
- * @list: list of nodes
+ * binary_tree_children - processes a list of nodes and its chilren
+ * @currentList: list of nodes
  * @func: pointer to function
  */
 void binary_tree_children(binary_tree_t **currentList, void (*func)(int))
@@ -40,7 +40,6 @@ void binary_tree_children(binary_tree_t **currentList, void (*func)(int))
 		{
 			/* Processing the node */
 			func((currentList[i])->n);
-			
 			/* Adding its left child to the new list */
 			if ((currentList[i])->left != NULL)
 			{

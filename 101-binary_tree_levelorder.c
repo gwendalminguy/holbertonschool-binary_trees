@@ -40,6 +40,7 @@ void binary_tree_children(binary_tree_t **currentList, void (*func)(int))
 		{
 			/* Processing the node */
 			func((currentList[i])->n);
+
 			/* Adding its left child to the new list */
 			if ((currentList[i])->left != NULL)
 			{

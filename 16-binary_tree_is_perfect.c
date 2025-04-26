@@ -1,10 +1,10 @@
 #include "binary_trees.h"
 #include "9-binary_tree_height.c"
 /**
- * binary_tree_is_perfect - Checks if a binary tree is perfect.
- * @tree: Pointer to tree to be checked.
+ * binary_tree_is_perfect - checks if a binary tree is perfect
+ * @tree: pointer to the root node
  *
- * Return: 1 if tree is perfect, 0 otherwise.
+ * Return: 1 if tree is perfect ; 0 otherwise
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {

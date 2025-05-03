@@ -42,21 +42,21 @@ int binary_tree_is_bst(const binary_tree_t *tree)
  */
 int is_all_lower(const binary_tree_t *subtree, int n)
 {
-	if (tree->left == NULL && tree->right == NULL)
+	if (subtree->left == NULL && subtree->right == NULL)
 		return (1);
 
-	if (tree->left != NULL && tree->left->n >= n)
+	if (subtree->left != NULL && subtree->left->n >= n)
 		return (0);
 
-	if (tree->left != NULL && tree->right->n >= n)
+	if (subtree->left != NULL && subtree->right->n >= n)
 		return (0);
 
-	if (tree->left != NULL && tree->right != NULL)
-		return (is_all_lower(tree->left, n) * is_all_lower(tree->right, n));
-	else if (tree->left != NULL)
-		return (is_all_lower(tree->left, n));
+	if (subtree->left != NULL && subtree->right != NULL)
+		return (is_all_lower(subtree->left, n) * is_all_lower(subtree->right, n));
+	else if (subtree->left != NULL)
+		return (is_all_lower(subtree->left, n));
 	else
-		return (is_all_lower(tree->right, n));
+		return (is_all_lower(subtree->right, n));
 }
 
 /**
@@ -68,19 +68,19 @@ int is_all_lower(const binary_tree_t *subtree, int n)
  */
 int is_all_greater(const binary_tree_t *subtree, int n)
 {
-	if (tree->left == NULL && tree->right == NULL)
+	if (subtree->left == NULL && subtree->right == NULL)
 		return (1);
 
-	if (tree->left != NULL && tree->left->n < n)
+	if (subtree->left != NULL && subtree->left->n < n)
 		return (0);
 
-	if (tree->left != NULL && tree->right->n < n)
+	if (subtree->left != NULL && subtree->right->n < n)
 		return (0);
 
-	if (tree->left != NULL && tree->right != NULL)
-		return (is_all_greater(tree->left, n) * is_all_greater(tree->right, n));
-	else if (tree->left != NULL)
-		return (is_all_greater(tree->left, n));
+	if (subtree->left != NULL && subtree->right != NULL)
+		return (is_all_greater(subtree->left, n) * is_all_greater(subtree->right, n));
+	else if (subtree->left != NULL)
+		return (is_all_greater(subtree->left, n));
 	else
-		return (is_all_greater(tree->right, n));
+		return (is_all_greater(subtree->right, n));
 }

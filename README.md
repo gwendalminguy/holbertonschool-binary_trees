@@ -58,6 +58,8 @@ This project is about learning to create and manipulate binary trees and nodes.
 
 * [113-bst_search.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/113-bst_search.c), a function searching for a given value in a binary search tree.
 
+* [120-binary_tree_is_avl.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/120-binary_tree_is_avl.c), a function checking if a given tree is an AVL tree.
+
 ## Properties
 
 | **Types** | **Description** |
@@ -71,4 +73,5 @@ This project is about learning to create and manipulate binary trees and nodes.
 | Full Tree | Tree where each node has either 0 or 2 children. |
 | Perfect Tree | Tree where each level is full, and all leaf nodes are on the same level. |
 | Balanced Tree | Tree where each node's left and right subtrees have a maximum height difference of 1. |
-| Binary Search Tree | ... |
+| Binary Search Tree | Tree where each node's left subtree only has inferior values and each node's right subtree only has greater values. |
+| AVL Tree | Binary Search Tree where each node's left and right subtrees are balanced. |

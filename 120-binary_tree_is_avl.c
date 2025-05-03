@@ -18,6 +18,12 @@ int binary_tree_is_avl(const binary_tree_t *tree)
 	return (is_avl_recursion(tree));
 }
 
+/**
+ * is_avl_recursion - checks if a binary tree is an AVL tree
+ * @tree: pointer to the root node
+ *
+ * Return: 1 if tree is an AVL tree ; 0 otherwise
+ */
 int is_avl_recursion(const binary_tree_t *tree)
 {
 	int factor = 0;

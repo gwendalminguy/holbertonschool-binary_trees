@@ -52,7 +52,8 @@ int is_all_lower(const binary_tree_t *subtree, int n)
 		return (0);
 
 	if (subtree->left != NULL && subtree->right != NULL)
-		return (is_all_lower(subtree->left, n) * is_all_lower(subtree->right, n));
+		return (is_all_lower(subtree->left, n)
+			* is_all_lower(subtree->right, n));
 	else if (subtree->left != NULL)
 		return (is_all_lower(subtree->left, n));
 	else
@@ -71,14 +72,15 @@ int is_all_greater(const binary_tree_t *subtree, int n)
 	if (subtree->left == NULL && subtree->right == NULL)
 		return (1);
 
-	if (subtree->left != NULL && subtree->left->n < n)
+	if (subtree->left != NULL && subtree->left->n <= n)
 		return (0);
 
-	if (subtree->left != NULL && subtree->right->n < n)
+	if (subtree->left != NULL && subtree->right->n <= n)
 		return (0);
 
 	if (subtree->left != NULL && subtree->right != NULL)
-		return (is_all_greater(subtree->left, n) * is_all_greater(subtree->right, n));
+		return (is_all_greater(subtree->left, n)
+			* is_all_greater(subtree->right, n));
 	else if (subtree->left != NULL)
 		return (is_all_greater(subtree->left, n));
 	else

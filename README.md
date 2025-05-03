@@ -50,6 +50,10 @@ This project is about learning to create and manipulate binary trees and nodes.
 
 * [101-binary_tree_levelorder.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/101-binary_tree_levelorder.c), a function going through a given tree using level-order traversal.
 
+* [103-binary_tree_rotate_left.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/103-binary_tree_rotate_left.c), a function rotating a given tree to the left.
+
+* [104-binary_tree_rotate_right.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/104-binary_tree_rotate_right.c), a function rotating a given tree to the right.
+
 * [110-binary_tree_is_bst.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/110-binary_tree_is_bst.c), a function checking if a given tree is a binary search tree.
 
 * [111-bst_insert.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/111-bst_insert.c), a function inserting a node in a binary search tree.

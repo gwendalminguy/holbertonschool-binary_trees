@@ -2,6 +2,7 @@
 #include "14-binary_tree_balance.c"
 #include "110-binary_tree_is_bst.c"
 
+int is_avl_recursion(const binary_tree_t *tree);
 
 /**
  * binary_tree_is_avl - checks if a binary tree is an AVL tree
@@ -11,17 +12,23 @@
  */
 int binary_tree_is_avl(const binary_tree_t *tree)
 {
+	if (!binary_tree_is_bst(tree))
+		return (0);
+
+	return (is_avl_recursion(tree));
+}
+
+int is_avl_recursion(const binary_tree_t *tree)
+{
 	int factor = 0;
 
 	if (tree == NULL)
 		return (0);
 
-	factor = binary_tree_balance(tree);
+	if (tree->left != NULL || tree->right != NULL)
+		factor = binary_tree_balance(tree);
 
 	if (factor < -1 || factor > 1)
-		return (0);
-
-	if (!binary_tree_is_bst(tree))
 		return (0);
 
 	if (tree->left == NULL && tree->right == NULL)

@@ -13,6 +13,9 @@ int binary_tree_is_avl(const binary_tree_t *tree)
 {
 	int factor = 0;
 
+	if (tree == NULL)
+		return (0);
+
 	factor = binary_tree_balance(tree);
 
 	if (factor < -1 || factor > 1)

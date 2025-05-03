@@ -29,6 +29,4 @@ int binary_tree_is_avl(const binary_tree_t *tree)
 		return (binary_tree_is_avl(tree->left));
 	else
 		return (binary_tree_is_avl(tree->left) * binary_tree_is_avl(tree->right));
-
-	return (1);
 }

@@ -50,11 +50,25 @@ This project is about learning to create and manipulate binary trees and nodes.
 
 * [101-binary_tree_levelorder.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/101-binary_tree_levelorder.c), a function going through a given tree using level-order traversal.
 
+* [110-binary_tree_is_bst.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/110-binary_tree_is_bst.c), a function checking if a given tree is a binary search tree.
+
+* [111-bst_insert.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/111-bst_insert.c), a function inserting a node in a binary search tree.
+
+* [112-array_to_bst.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/112-array_to_bst.c), a function building a binary search tree from a given array of integers.
+
+* [113-bst_search.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/113-bst_search.c), a function searching for a given value in a binary search tree.
+
 ## Properties
 
 | **Types** | **Description** |
 | :-------- | :-------------- |
-| Complete | ... |
-| Full | ... |
-| Perfect | ... |
-| Balanced | ... |
+| Root Node | The node with no parent. |
+| Leaf Node | A node with no children. |
+| Depth of Node | Number of edges between the node and the root node. |
+| Height of Node | Number of edges between the node and the lowest leaf node. |
+| Size of Tree | Number of nodes in the tree. |
+| Complete Tree | A tree where each level is full, except the lowest one, where elements are filled from left to right. |
+| Full Tree | Tree where each node has either 0 or 2 children. |
+| Perfect Tree | Tree where each level is full, and all leaf nodes are on the same level. |
+| Balanced Tree | Tree where each node's left and right subtrees have a maximum height difference of 1. |
+| Binary Search Tree | ... |

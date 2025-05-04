@@ -18,7 +18,7 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	if (tree != NULL)
 	{
 		/* Counting total number of nodes */
-		total = count_nodes(tree);
+		total = total_nodes(tree);
 
 		/* Adding the root node to the list */
 		currentList[0] = (binary_tree_t *)tree;
@@ -32,9 +32,9 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 		/* Comparing values */
 		if (total == nodes)
 			return (1);
-
-		return (0);
 	}
+
+	return (0);
 }
 
 /**
@@ -93,6 +93,8 @@ int count_nodes(binary_tree_t **currentList, int nodes)
 		/* Processing the new list */
 		return (count_nodes(childrenList, nodes));
 	}
+
+	return (0);
 }
 
 /**

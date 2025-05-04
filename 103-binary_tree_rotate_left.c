@@ -30,5 +30,13 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 	current->left->right = temp;
 	current->parent = above;
 
+	if (above != NULL)
+	{
+		if (above->left == current->left)
+			above->left = current;
+		else if (above->right == current->left)
+			above->right = current;
+	}
+
 	return (current);
 }

@@ -50,6 +50,8 @@ This project is about learning to create and manipulate binary trees and nodes.
 
 * [101-binary_tree_levelorder.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/101-binary_tree_levelorder.c), a function going through a given tree using level-order traversal.
 
+* [102-binary_tree_is_complete.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/102-binary_tree_is_complete.c), a function checking if a given tree is complete.
+
 * [103-binary_tree_rotate_left.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/103-binary_tree_rotate_left.c), a function rotating a given tree to the left.
 
 * [104-binary_tree_rotate_right.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/104-binary_tree_rotate_right.c), a function rotating a given tree to the right.
@@ -74,9 +76,9 @@ This project is about learning to create and manipulate binary trees and nodes.
 | :-------- | :-------------- |
 | Root Node | The node with no parent. |
 | Leaf Node | A node with no children. |
-| Depth of Node | Number of edges between the node and the root node. |
-| Height of Node | Number of edges between the node and the lowest leaf node. |
-| Size of Tree | Number of nodes in the tree. |
+| Node Depth | Number of edges between the node and the root node. |
+| Node Height | Number of edges between the node and the lowest leaf node. |
+| Tree Size | Number of nodes in the tree. |
 | Complete Tree | A tree where each level is full, except the lowest one, where elements are filled from left to right. |
 | Full Tree | Tree where each node has either 0 or 2 children. |
 | Perfect Tree | Tree where each level is full, and all leaf nodes are on the same level. |

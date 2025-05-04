@@ -25,6 +25,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 			return (NULL);
 	}
 
+	/* Creating the new node */
 	new = malloc(sizeof(bst_t));
 
 	if (new == NULL)

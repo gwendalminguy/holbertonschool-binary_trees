@@ -29,7 +29,7 @@ avl_t *avl_insert(avl_t **tree, int value)
 	}
 
 	/* Creating the new node */
-	new = malloc(sizeof(bst_t));
+	new = malloc(sizeof(avl_t));
 
 	if (new == NULL)
 		return (NULL);
@@ -78,12 +78,14 @@ avl_t *avl_balance(avl_t *tree, int factor)
 {
 	if (factor > 1)
 	{
+		/* Rotating tree to the right */
 		if (tree->left != NULL && binary_tree_balance(tree->left) < 0)
 			tree->left = binary_tree_rotate_left(tree->left);
 		tree = binary_tree_rotate_right(tree);
 	}
 	else if (factor < -1)
 	{
+		/* Rotating tree to the left */
 		if (tree->right != NULL && binary_tree_balance(tree->right) > 0)
 			tree->right = binary_tree_rotate_right(tree->right);
 		tree = binary_tree_rotate_left(tree);

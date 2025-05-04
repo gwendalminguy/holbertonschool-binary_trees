@@ -29,8 +29,8 @@ avl_t *avl_insert(avl_t **tree, int value)
 			return (NULL);
 	}
 
+	/* Creating the new node */
 	new = malloc(sizeof(bst_t));
-
 	if (new == NULL)
 		return (NULL);
 
@@ -50,14 +50,16 @@ avl_t *avl_insert(avl_t **tree, int value)
 			parent->right = new;
 	}
 
+	/* Keeping the tree balanced */
 	above = new;
-
 	while (above != NULL)
 	{
 		factor = binary_tree_balance(above);
 
 		if (factor < -1 || factor > 1)
 			above = avl_balance(above, factor);
+		if (above->parent == NULL)
+			*tree = above;
 		above = above->parent;
 	}
 

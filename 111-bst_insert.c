@@ -13,6 +13,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 	bst_t *new = NULL;
 	bst_t *parent = NULL;
 
+	/* Finding position for the new node */
 	while (current != NULL)
 	{
 		parent = current;

@@ -16,6 +16,7 @@ avl_t *avl_insert(avl_t **tree, int value)
 	avl_t *parent = NULL;
 	int factor = 0;
 
+	/* Finding position for the new node */
 	while (current != NULL)
 	{
 		parent = current;

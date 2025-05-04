@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 
-avl_t *avl_balance(avl_t *root);
+avl_t *avl_balance(avl_t *tree);
 
 /**
  * avl_insert - inserts a new node in an AVL tree
@@ -78,13 +78,13 @@ avl_t *avl_balance(avl_t *tree)
 			if (factor > 1)
 			{
 				if (tree->left != NULL && binary_tree_balance(tree->left) < 0)
-					binary_tree_rotate_left(tree->left);
+					tree->left = binary_tree_rotate_left(tree->left);
 				tree = binary_tree_rotate_right(tree);
 			}
 			else if (factor < -1)
 			{
 				if (tree->right != NULL && binary_tree_balance(tree->right) > 0)
-					binary_tree_rotate_right(tree->right);
+					tree->right = binary_tree_rotate_right(tree->right);
 				tree = binary_tree_rotate_left(tree);
 			}
 		}

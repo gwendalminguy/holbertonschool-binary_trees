@@ -64,6 +64,8 @@ This project is about learning to create and manipulate binary trees and nodes.
 
 * [120-binary_tree_is_avl.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/120-binary_tree_is_avl.c), a function checking if a given tree is an AVL tree.
 
+* [121-avl_insert.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/121-avl_insert.c), a function inserting a node in an AVL tree.
+
 ## Properties
 
 | **Types** | **Description** |

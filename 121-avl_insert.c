@@ -1,6 +1,6 @@
 #include "binary_trees.h"
 
-avl_t *avl_balance(avl_t *tree);
+avl_t *avl_balance(avl_t *tree, int factor);
 
 /**
  * avl_insert - inserts a new node in an AVL tree
@@ -14,6 +14,8 @@ avl_t *avl_insert(avl_t **tree, int value)
 	avl_t *current = *tree;
 	avl_t *new = NULL;
 	avl_t *parent = NULL;
+	avl_t *above;
+	int factor = 0;
 
 	while (current != NULL)
 	{
@@ -48,7 +50,16 @@ avl_t *avl_insert(avl_t **tree, int value)
 			parent->right = new;
 	}
 
-	avl_balance(*tree);
+	above = new;
+
+	while (above != NULL)
+	{
+		factor = binary_tree_balance(above);
+
+		if (factor < -1 || factor > 1)
+			above = avl_balance(above, factor);
+		above = above->parent;
+	}
 
 	return (new);
 }
@@ -56,37 +67,25 @@ avl_t *avl_insert(avl_t **tree, int value)
 /**
  * avl_balance - balances a binary tree
  * @tree: pointer to the root node
+ * @factor: ...
  *
  * Return: pointer to the root node
  */
-avl_t *avl_balance(avl_t *tree)
+avl_t *avl_balance(avl_t *tree, int factor)
 {
-	int factor = 0;
-
-	if (tree != NULL)
+	if (tree->left != NULL || tree->right != NULL)
 	{
-		if (tree->left != NULL || tree->right != NULL)
+		if (factor > 1)
 		{
-			if (tree->left != NULL)
-				tree->left = avl_balance(tree->left);
-
-			if (tree->right != NULL)
-				tree->right = avl_balance(tree->right);
-
-			factor = binary_tree_balance(tree);
-
-			if (factor > 1)
-			{
-				if (tree->left != NULL && binary_tree_balance(tree->left) < 0)
-					tree->left = binary_tree_rotate_left(tree->left);
-				tree = binary_tree_rotate_right(tree);
-			}
-			else if (factor < -1)
-			{
-				if (tree->right != NULL && binary_tree_balance(tree->right) > 0)
-					tree->right = binary_tree_rotate_right(tree->right);
-				tree = binary_tree_rotate_left(tree);
-			}
+			if (tree->left != NULL && binary_tree_balance(tree->left) < 0)
+				tree->left = binary_tree_rotate_left(tree->left);
+			tree = binary_tree_rotate_right(tree);
+		}
+		else if (factor < -1)
+		{
+			if (tree->right != NULL && binary_tree_balance(tree->right) > 0)
+				tree->right = binary_tree_rotate_right(tree->right);
+			tree = binary_tree_rotate_left(tree);
 		}
 	}
 

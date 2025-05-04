@@ -14,7 +14,6 @@ avl_t *avl_insert(avl_t **tree, int value)
 	avl_t *current = *tree;
 	avl_t *new = NULL;
 	avl_t *parent = NULL;
-	avl_t *above;
 	int factor = 0;
 
 	while (current != NULL)
@@ -52,17 +51,17 @@ avl_t *avl_insert(avl_t **tree, int value)
 	}
 
 	/* Keeping the tree balanced */
-	above = new;
+	current = new;
 
-	while (above != NULL)
+	while (current != NULL)
 	{
-		factor = binary_tree_balance(above);
+		factor = binary_tree_balance(current);
 
 		if (factor < -1 || factor > 1)
-			above = avl_balance(above, factor);
-		if (above->parent == NULL)
-			*tree = above;
-		above = above->parent;
+			current = avl_balance(current, factor);
+		if (current->parent == NULL)
+			*tree = current;
+		current = current->parent;
 	}
 
 	return (new);
@@ -77,20 +76,17 @@ avl_t *avl_insert(avl_t **tree, int value)
  */
 avl_t *avl_balance(avl_t *tree, int factor)
 {
-	if (tree->left != NULL || tree->right != NULL)
+	if (factor > 1)
 	{
-		if (factor > 1)
-		{
-			if (tree->left != NULL && binary_tree_balance(tree->left) < 0)
-				tree->left = binary_tree_rotate_left(tree->left);
-			tree = binary_tree_rotate_right(tree);
-		}
-		else if (factor < -1)
-		{
-			if (tree->right != NULL && binary_tree_balance(tree->right) > 0)
-				tree->right = binary_tree_rotate_right(tree->right);
-			tree = binary_tree_rotate_left(tree);
-		}
+		if (tree->left != NULL && binary_tree_balance(tree->left) < 0)
+			tree->left = binary_tree_rotate_left(tree->left);
+		tree = binary_tree_rotate_right(tree);
+	}
+	else if (factor < -1)
+	{
+		if (tree->right != NULL && binary_tree_balance(tree->right) > 0)
+			tree->right = binary_tree_rotate_right(tree->right);
+		tree = binary_tree_rotate_left(tree);
 	}
 
 	return (tree);

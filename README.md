@@ -66,6 +66,8 @@ This project is about learning to create and manipulate binary trees and nodes.
 
 * [121-avl_insert.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/121-avl_insert.c), a function inserting a node in an AVL tree.
 
+* [122-array_to_avl.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/122-array_to_avl.c), a function building an AVL tree from a given array of integers.
+
 ## Properties
 
 | **Types** | **Description** |

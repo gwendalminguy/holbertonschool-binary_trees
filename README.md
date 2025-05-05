@@ -70,6 +70,8 @@ This project is about learning to create and manipulate binary trees and nodes.
 
 * [122-array_to_avl.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/122-array_to_avl.c), a function building an AVL tree from a given array of integers.
 
+* [130-binary_tree_is_heap.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/130-binary_tree_is_heap.c), a function checking if a given tree is a max binary heap.
+
 ## Properties
 
 | **Types** | **Description** |
@@ -85,3 +87,4 @@ This project is about learning to create and manipulate binary trees and nodes.
 | Balanced Tree | Tree where each node's left and right subtrees have a maximum height difference of 1. |
 | Binary Search Tree | Tree where each node's left subtree only has inferior values and each node's right subtree only has greater values. |
 | AVL Tree | Binary Search Tree where each node's left and right subtrees are balanced. |
+| Max Binary Heap | Complete binary tree where each node's left and right subtrees only have inferior values. |

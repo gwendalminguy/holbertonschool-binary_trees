@@ -1,4 +1,5 @@
 #include "binary_trees.h"
+#include "102-binary_tree_is_complete.c"
 
 /**
  * binary_tree_is_heap - checks if a binary tree is a max binary heap

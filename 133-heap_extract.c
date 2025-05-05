@@ -39,18 +39,28 @@ int heap_extract(heap_t **root)
 		}
 
 		/* Swapping down the node until it has no child */
-		while (last->left != NULL || last->right != NULL)
+		while (last->left != NULL)
 		{
 			if (last->right == NULL)
-				last = swap_down(last, last->left);
-			else if (last->left == NULL)
-				last = swap_down(last, last->right);
-			else
 			{
-				if (last->left->n > last->right->n)
+				if (last->left->n > last->n)
 					last = swap_down(last, last->left);
 				else
+					break;
+			}
+			else if (last->left->n > last->right->n)
+			{
+				if (last->left->n > last->n)
+					last = swap_down(last, last->left);
+				else
+					break;
+			}
+			else
+			{
+				if (last->right->n > last->n)
 					last = swap_down(last, last->right);
+				else
+					break;
 			}
 
 			if (first)

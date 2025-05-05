@@ -15,7 +15,7 @@ int heap_extract(heap_t **root)
 {
 	heap_t *current = *root;
 	heap_t *current_list[2];
-	heap_t *last, *temp;
+	heap_t *last;
 	int nodes = 0, value = 0, first = 1;
 
 	if (current != NULL)

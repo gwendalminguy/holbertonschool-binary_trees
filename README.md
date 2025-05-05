@@ -74,6 +74,8 @@ This project is about learning to create and manipulate binary trees and nodes.
 
 * [131-heap_insert.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/131-heap_insert.c), a function inserting a node in a max heap binary tree.
 
+* [132-array_to_heap.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/132-array_to_heap.c), a function building a max binary heap tree from a given array of integers.
+
 ## Properties
 
 | **Types** | **Description** |

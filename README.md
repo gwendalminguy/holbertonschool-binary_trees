@@ -72,6 +72,8 @@ This project is about learning to create and manipulate binary trees and nodes.
 
 * [130-binary_tree_is_heap.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/130-binary_tree_is_heap.c), a function checking if a given tree is a max binary heap.
 
+* [131-heap_insert.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/131-heap_insert.c), a function inserting a node in a max heap binary tree.
+
 ## Properties
 
 | **Types** | **Description** |

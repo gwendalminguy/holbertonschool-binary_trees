@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 heap_t *find_position(heap_t **current_list);
-heap_t *swap_nodes(heap_t *parent, heap_t *child);
+heap_t *swap_up(heap_t *parent, heap_t *child);
 
 /**
  * heap_insert - inserts a new node in a max binary heap
@@ -50,7 +50,7 @@ heap_t *heap_insert(heap_t **root, int value)
 	/* Swapping up the node until right position found */
 	while (current != NULL && current->n < value)
 	{
-		new = swap_nodes(current, new);
+		new = swap_up(current, new);
 		current = new->parent;
 	}
 
@@ -112,13 +112,13 @@ heap_t *find_position(heap_t **current_list)
 }
 
 /**
- * swap_nodes - swaps a child node with its parent node
+ * swap_up - swaps a child node with its parent node
  * @parent: pointer to the parent node
  * @child: pointer to the child node
  *
  * Return: pointer to the new parent
  */
-heap_t *swap_nodes(heap_t *parent, heap_t *child)
+heap_t *swap_up(heap_t *parent, heap_t *child)
 {
 	heap_t *temp;
 

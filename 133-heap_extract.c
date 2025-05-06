@@ -62,12 +62,16 @@ int heap_extract(heap_t **root)
 				else
 					break;
 			}
-
 			if (first)
 				*root = last->parent;
-
 			first = 0;
 		}
+
+		/* Updating root when no swap made */
+		if (first)
+			*root = last;
+		first = 0;
+
 	}
 	return (value);
 }

@@ -78,6 +78,8 @@ This project is about learning to create and manipulate binary trees and nodes.
 
 * [133-heap_extract.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/133-heap_extract.c), a function extracting the root node from a max heap tree.
 
+* [134-heap_to_sorted_array.c](https://github.com/gwendalminguy/holbertonschool-binary_trees/tree/main/134-heap_to_sorted_array.c), a function building a sorted array of integers from a max heap tree.
+
 ## Properties
 
 | **Types** | **Description** |

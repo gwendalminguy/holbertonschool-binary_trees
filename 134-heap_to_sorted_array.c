@@ -3,11 +3,11 @@
 size_t count_nodes(const binary_tree_t *tree);
 
 /**
- * heap_to_sorted_array - builds a sorted array in descending order from a max heap binary tree
+ * heap_to_sorted_array - builds sorted array from max heap binary tree
  * @heap: pointer to the root node
  * @size: size of array
  *
- * Return: sorted array
+ * Return: sorted array in descending order
  */
 int *heap_to_sorted_array(heap_t *heap, size_t *size)
 {

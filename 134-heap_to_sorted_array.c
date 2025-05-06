@@ -7,13 +7,16 @@ size_t count_nodes(const binary_tree_t *tree);
  * @heap: pointer to the root node
  * @size: size of array
  *
- * Return: ...
+ * Return: sorted array
  */
 int *heap_to_sorted_array(heap_t *heap, size_t *size)
 {
 	int *array;
 	size_t i = 0;
 	int value = 0;
+
+	if (heap == NULL)
+		return (NULL);
 
 	*size = count_nodes(heap);
 	array = malloc(sizeof(int) * *size);

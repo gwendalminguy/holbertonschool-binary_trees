@@ -1,6 +1,6 @@
 ## Binary Trees
 
-This project is about learning to create and manipulate binary trees and nodes.
+This project is about learning to create and manipulate [Binary Trees](https://en.wikipedia.org/wiki/Binary_tree).
 
 ## Files
 
@@ -82,17 +82,19 @@ This project is about learning to create and manipulate binary trees and nodes.
 
 ## Properties
 
-| **Types** | **Description** |
+This project involves several important notions regarding binary trees:
+
+| **Notion** | **Description** |
 | :-------- | :-------------- |
-| Root Node | The node with no parent. |
-| Leaf Node | A node with no children. |
-| Node Depth | Number of edges between the node and the root node. |
-| Node Height | Number of edges between the node and the lowest leaf node. |
-| Tree Size | Number of nodes in the tree. |
-| Complete Tree | A tree where each level is full, except the lowest one, where elements are filled from left to right. |
-| Full Tree | Tree where each node has either 0 or 2 children. |
-| Perfect Tree | Tree where each level is full, and all leaf nodes are on the same level. |
-| Balanced Tree | Tree where each node's left and right subtrees have a maximum height difference of 1. |
-| Binary Search Tree | Tree where each node's left subtree only has inferior values and each node's right subtree only has greater values. |
-| AVL Tree | Binary Search Tree where each node's left and right subtrees are balanced. |
-| Max Heap Tree | Complete binary tree where each node's left and right subtrees only have inferior values. |
+| **Root Node** | The node with no parent. |
+| **Leaf Node** | A node with no children. |
+| **Node Depth** | Number of edges between the node and the root node. |
+| **Node Height** | Number of edges between the node and the lowest leaf node. |
+| **Tree Size** | Number of nodes in the tree. |
+| **Complete Tree** | A tree where each level is full, except the lowest one, where elements are filled from left to right. |
+| **Full Tree** | Tree where each node has either 0 or 2 children. |
+| **Perfect Tree** | Tree where each level is full, and all leaf nodes are on the same level. |
+| **Balanced Tree** | Tree where each node's left and right subtrees have a maximum height difference of 1. |
+| **Binary Search Tree** | Tree where each node's left subtree only has inferior values and each node's right subtree only has greater values. |
+| **AVL Tree** | Binary Search Tree where each node's left and right subtrees are balanced. |
+| **Max Heap Tree** | Complete binary tree where each node's left and right subtrees only have inferior values. |

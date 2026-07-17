@@ -1,4 +1,4 @@
-## Binary Trees
+# Binary Trees
 
 This project is about learning to create and manipulate [Binary Trees](https://en.wikipedia.org/wiki/Binary_tree).
 
